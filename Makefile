@@ -18,7 +18,7 @@ CORE_SRCS = $(SRCDIR)/core/main.c $(SRCDIR)/core/executor_loop.c \
 ENV_SRCS = $(SRCDIR)/env/env.c $(SRCDIR)/env/system_env.c $(SRCDIR)/env/various.c
 
 EXE_SRCS = $(SRCDIR)/exe/redirects.c $(SRCDIR)/exe/resolve_path.c \
-		   $(SRCDIR)/exe/fd.c $(SRCDIR)/exe/path.c 
+		   $(SRCDIR)/exe/fd.c $(SRCDIR)/exe/path.c $(SRCDIR)/exe/parent_exe.c 
 
 HDOC_SRCS = $(SRCDIR)/hdoc/heredoc_buffer.c $(SRCDIR)/hdoc/heredoc_preprocessor.c \
 			$(SRCDIR)/hdoc/read_heredoc.c

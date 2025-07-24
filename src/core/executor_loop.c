@@ -109,7 +109,7 @@ int	executor_loop(t_node *node, t_shell_state *state, t_token *token_head)
         if (create_pipe_if_needed(node, pipe_fd))
             return (1);
         if (should_execute_in_parent(node))
-            return (exec_in_parent(node, state));
+            return execute_in_parent_and_close(node, state, pipe_fd, prev_fd);
         ctx = (t_executor_context){node, head, state, token_head, pipe_fd, prev_fd, &last_pid};
         if (handle_fork_and_child(&ctx))
             return (1);

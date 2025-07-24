@@ -7,6 +7,7 @@
 /* Main execution functions */
 int		executor_loop(t_node *node, t_shell_state *state, t_token *token_head);
 int		exec_in_parent(t_node *node, t_shell_state *state);
+int		execute_in_parent_and_close(t_node *node, t_shell_state *state, int pipe_fd[2], int prev_fd);
 void	update_fds_for_next_cmd(t_node *node, int pipe_fd[2], int *prev_fd);
 int		wait_for_last(pid_t last_pid, int *exit_status);
 
